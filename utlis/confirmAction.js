@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
-import styles from "./confirmAction.module.css";
+import styles from "./confirmaction.module.css";
 
 /**
  * Displays a confirmation dialog and executes a callback if confirmed.
