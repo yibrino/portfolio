@@ -1,0 +1,267 @@
+.header {
+  background: #0e1630;
+  min-width: 100vw;
+  border-bottom: 2px solid #00060b;
+  height: 80px;
+  position: sticky;
+  align-items: center;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  margin-right: -4px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 70px;
+  transition: height 0.3s ease, line-height 0.3s ease;
+}
+
+.nav__wrapper {
+  margin: 0px;
+  color: #01d293;
+  font-size: 14px;
+  padding-left: 30px;
+  padding-right: 50px;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 span {
+  margin: 2px;
+  transition: font-size 0.3s ease;
+  color: #01d293;
+  align-items: center;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeLink {
+  color: #01d293; /* Text color */
+  text-decoration: none; /* Remove underline */
+
+  border-top: 4px solid #01d293; /* Top border to simulate the highlight */
+  padding: 20px; /* Reset padding for full alignment */
+  margin-bottom: 0px;
+  text-align: center; /* Center the text */
+  background-color: #171f38; /* Background color */
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  box-sizing: border-box; /* Include border in the dimensions */
+}
+
+.not__visited {
+  color: #01d293;
+  text-decoration: none;
+}
+
+.nav__menu li {
+  list-style: none;
+  font-weight: 600;
+  color: #01d293;
+  text-transform: uppercase;
+  align-items: center;
+  margin: 0 10px;
+}
+.nav__menu li a {
+  color: #01d293;
+}
+.closed {
+  /* styles for when the menu is closed */
+  display: none;
+}
+.nav__right p {
+  color: #01d293;
+  margin-left: 20px;
+}
+
+.nav__right i {
+  color: #808dad;
+}
+.header__shrink {
+  width: 100%;
+  border-bottom: 2px solid #00060b;
+  height: 80px;
+  position: sticky;
+  align-items: center;
+  z-index: 9999;
+
+  top: 0;
+  left: 0;
+  padding: 0px;
+
+  line-height: 70px;
+  margin: 0; /* Remove unnecessary margins */
+  transition: height 0.3s ease, line-height 0.3s ease;
+}
+.open {
+  display: none;
+}
+/* Hamburger menu */
+/* Hamburger menu */
+.mobile__menu i {
+  font-size: 2rem; /* Increased the size */
+  color: #01d293; /* Brightened the color */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Added transform transition */
+}
+
+.mobile__menu {
+  display: none;
+}
+.hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    background-color: #01d293;
+    align-items: center;
+    display: none;
+    width: 100%; /* Width for mobile sidebar */
+    height: 100%;
+    z-index: 99999;
+    transition: left 0.3s ease-in-out;
+  }
+  .nav__wrapper {
+    font-size: 11px;
+    border-bottom: 2px solid #00060b;
+  }
+
+  .navigation {
+    margin: 0px;
+  }
+
+  .open {
+    padding: 10px;
+
+    margin: 2px;
+    background-color: #0e1630;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex;
+    margin-top: 4px;
+    left: 0px;
+    padding-right: 50px;
+    flex-direction: column;
+    position: absolute; /* Ensure it's positioned relative to the screen */
+    width: 100%; /* You can adjust the width as per your design */
+    z-index: 1000; /* Ensure it's on top of other content */
+  }
+  .open li {
+    list-style: none;
+    padding: 2px 0; /* Reduced vertical padding */
+    margin: 2px 0px; /* Reduced vertical margin */
+    font-size: 1rem; /* Reduced font size */
+    line-height: 2; /* Reduced line height */
+    border-bottom: 2px solid #171f38;
+  }
+
+  .open li a {
+    display: block; /* Ensures the <a> tag takes full width of the li */
+    padding: 4px 8px; /* Reduce padding inside the link */
+    margin: 0px;
+  }
+
+  .hamburger {
+    background: #0e1630;
+    font-size: 14px;
+    display: block;
+  }
+
+  .container {
+    max-width: 100%;
+    font-size: 4.1rem;
+  }
+  .mobile-menu {
+    display: none;
+  }
+
+  .nav__right {
+    display: none;
+  }
+
+  .nav__menu {
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+
+  .mobile__menu {
+    display: block !important;
+    z-index: 10000; /* Above the menu */
+  }
+
+  .navLink {
+    color: #fff;
+    text-align: left;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .navLink:hover {
+    background: #01d293;
+    color: #fff;
+  }
+  .logo {
+    margin-top: 2px;
+  }
+
+  .logo h1 {
+    margin-top: 2px;
+    background-color: #01d293;
+    align-items: center;
+    margin-left: 0;
+    height: 0px;
+  }
+
+  .nav__menu li {
+    font-size: 1rem;
+  }
+
+  .nav__menu {
+    font-size: 1rem;
+    column-gap: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .logo h1 span {
+    margin: 2px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1rem !important;
+  }
+
+  .nav__wrapper {
+    font-size: 11px;
+  }
+
+  .nav__menu li {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .nav__wrapper {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .nav__wrapper {
+    font-size: 8px;
+  }
+}

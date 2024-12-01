@@ -1,0 +1,17 @@
+.videoContainer {
+  width: 600px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #171f38;
+  border-radius: 8px; /* Optional rounded corners */
+  overflow: hidden; /* Prevent content from overflowing */
+  margin: 0 auto; /* Center the container */
+}
+
+.videoPlayer {
+  width: 100% !important; /* Ensure the player fits within the container */
+  height: 100% !important; /* Ensure the player fits within the container */
+}

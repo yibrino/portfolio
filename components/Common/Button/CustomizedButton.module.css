@@ -1,0 +1,56 @@
+.button__list {
+  background-color: #01d293;
+  flex-grow: 1;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #171f38;
+}
+
+.button__list:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+.button__list:hover i {
+  color: #171f38;
+}
+
+.button__list:hover h5 {
+  color: #171f38;
+}
+
+.button__list span,
+.button__list h5,
+.button__list span i {
+  color: #171f38;
+  background: transparent !important;
+}
+
+.button__list span i {
+  font-size: 3rem;
+  color: #01d293;
+}
+
+.button__list h5 {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .button__list span i {
+    font-size: 2rem;
+  }
+  .button__list h5 {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,79 @@
+.sectionListContainer {
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  gap: 20px; /* Space between rows for better readability */
+}
+
+.sectionList {
+  display: flex;
+  align-items: flex-start; /* Align items to the top of their container */
+  gap: 20px; /* Space between the icon and content */
+  padding: 15px;
+  border: 1px solid #171f38;
+
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for modern look */
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: #28a745; /* Green background */
+  border-radius: 50%; /* Circular icon */
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.icon {
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg); /* Checkmark style */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add space between title, details, and description */
+}
+
+.title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #d1d5db;
+  margin: 0; /* Remove default margins */
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between institution and date */
+  font-size: 14px;
+  color: #555;
+}
+
+.institution,
+.dateRange {
+  display: flex;
+  color: #01d293;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+}
+
+.detailIcon {
+  width: 16px;
+  height: 16px;
+  color: #555;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d5db;
+}

@@ -1,0 +1,57 @@
+.sectionListContainer {
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  gap: 10px; /* Space between rows */
+}
+
+.sectionList {
+  display: flex;
+  align-items: flex-start; /* Align items to the top of their container */
+  gap: 20px; /* Space between the icon and content */
+  padding: 15px;
+  border: 1px solid #171f38;
+
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for modern look */
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #28a745; /* Green background */
+  border-radius: 4px; /* Slightly rounded corners */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+  flex-shrink: 0; /* Prevent the icon from shrinking or moving */
+  position: relative; /* Fixed to its row */
+}
+
+.icon {
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg); /* Rotates to form a checkmark */
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* Stack title and description vertically */
+}
+
+.title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #d1d5db;
+  margin: 0; /* Remove default margins for better alignment */
+}
+
+.description {
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px; /* Spacing between lines for readability */
+}

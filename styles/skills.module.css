@@ -1,0 +1,28 @@
+.skills {
+  padding: 10px;
+  margin: 20px;
+  min-width: 100vw;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.skillsRow {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill {
+  border: 2px solid #171f38;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}

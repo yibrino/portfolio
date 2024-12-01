@@ -1,0 +1,134 @@
+.skills {
+  padding: 10px;
+  margin: 2px;
+  border-bottom: 2px solid #00060b;
+  min-width: 100vw;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 2px;
+}
+
+.skillsRow {
+  border: 2px solid #171f38;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certification-page {
+  border: 2px solid #ccc;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+.title {
+  margin-bottom: 0;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.certificationTitle {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.readMore {
+  background-color: #01d293;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.readMore:hover {
+  background-color: #808dad;
+  border-color: #0062cc;
+}
+.certification-page h1 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.certification-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certification-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.certification-details {
+  margin-top: 50px;
+  width: 80%;
+}
+
+.certification-details h2 {
+  margin-top: 30px;
+}
+
+.certification-details p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.certification-details ul {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.certification-details ul li {
+  margin-bottom: 10px;
+}
+
+.readmore {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.readmore:hover {
+  background-color: #0062cc;
+}
+
+@media only screen and (max-width: 768px) {
+  .certification-details {
+    width: 100%;
+  }
+}

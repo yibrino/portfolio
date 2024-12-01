@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #01d293;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  transform: translateX(-100%);
+  transition: transform 2s ease-out;
+}
+.visible {
+  transform: translateX(0%);
+}
+
+.yellow {
+  color: #f5c431;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f5c431;
+}

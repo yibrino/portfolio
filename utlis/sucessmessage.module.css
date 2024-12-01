@@ -1,0 +1,27 @@
+/* Custom Success Toast Notification */
+.customSuccessToast {
+  background-color: #0c1533 !important; /* Green background */
+  color: #d1d5db;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px 12px rgba(2, 228, 104, 0.3);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Custom Progress Bar for Success Toast */
+.customProgressBar {
+  background: #218838 !important; /* Darker green for progress bar */
+}
+
+/* Responsive Toast Styling */
+@media (max-width: 600px) {
+  .customSuccessToast {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

@@ -1,0 +1,27 @@
+.commentForm textarea {
+  width: 100%;
+  min-height: 80px;
+  margin-bottom: 10px;
+}
+.commentArea {
+  color: #d1d5db;
+}
+.submitButtton {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #171f38;
+  background-color: #01d293;
+
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitButtton:hover {
+  background: #02b583;
+}

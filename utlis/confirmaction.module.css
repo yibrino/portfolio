@@ -1,0 +1,37 @@
+/* confirmAction.module.css */
+
+.customSwalPopup {
+  font-family: "Arial", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  background-color: #0e1630 !important;
+  color: #ffffff !important;
+}
+
+.customSwalTitle {
+  font-size: 1.5rem;
+  color: #ffffff !important;
+}
+
+.customSwalContent {
+  font-size: 1rem;
+  color: #b0b0b0 !important;
+}
+
+.customSwalConfirmButton {
+  background-color: #4caf50 !important;
+  color: #ffffff !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.customSwalCancelButton {
+  background-color: #f44336 !important;
+  color: #ffffff !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}

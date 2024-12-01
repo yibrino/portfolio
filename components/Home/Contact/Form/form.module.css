@@ -1,0 +1,117 @@
+.form {
+  max-width: 600px;
+  margin: auto;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form__group input,
+.form__group textarea,
+.form__group select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #171f38;
+  color: whitesmoke;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.form__group select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.form__group input::placeholder,
+.form__group textarea::placeholder {
+  font-size: 0.8rem;
+  color: #808dad;
+}
+
+.form button {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #171f38;
+  background-color: #01d293;
+
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form button:hover {
+  background: #02b583;
+}
+.formInfo {
+  border: 2px solid #0040ff;
+}
+.formContact {
+  border: 2px solid #171f38;
+}
+.error {
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.dropdown {
+  background-color: #171f38;
+  color: #01d293;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown option {
+  background-color: #171f38;
+  color: #01d293;
+}
+
+.dropdown option:hover {
+  background-color: #01d293;
+  color: #171f38;
+}
+
+.dropdown option:checked {
+  background-color: #01d293;
+  color: #171f38;
+}
+/* Custom Success Toast Notification */
+.customSuccessToast {
+  background-color: #02b583 !important; /* Green background */
+  color: #d1d5db;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 4px 4px 12px rgba(92, 49, 49, 0.3);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Custom Progress Bar for Success Toast */
+.customProgressBar {
+  background: #218838 !important; /* Darker green for progress bar */
+}
+
+/* Responsive Toast Styling */
+@media (max-width: 600px) {
+  .customSuccessToast {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.layout {
+  background-color: aqua;
+  min-width: 100vw;
+}

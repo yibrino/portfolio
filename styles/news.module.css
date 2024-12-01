@@ -1,0 +1,100 @@
+.news {
+  padding: 10px;
+  overflow-x: hidden;
+  margin: 2px;
+  border-bottom: 2px solid #00060b;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 2px;
+}
+/* Container Styling */
+.container {
+  margin: 5px;
+  padding: 5px;
+}
+
+/* Grid Layout Styling */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two items per row by default */
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* One item per row on small screens */
+  }
+}
+
+/* Card Styling */
+.card {
+  /* border: 2px solid #00060b; */
+  border: 2px solid #171f38;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 2px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Body Styling */
+.cardBody {
+  padding: 16px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.cardBody p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+/* Card Footer Styling */
+.cardFooter {
+  padding: 20px;
+  margin: 5px;
+  width: 100%;
+  color: green;
+  border-top: 2px solid #171f38;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Like Icon Styling */
+.likeIcon,
+.commentIcon {
+  width: 20px;
+  height: w0px;
+  color: #555;
+}
+.likeIconFilled {
+  width: 20px;
+  height: 20px;
+  color: #970a0a;
+}
+.text {
+  color: #01d293;
+}
+
+.cardImage {
+  background-color: #171616;
+  object-fit: contain;
+  padding: 20px;
+  margin: 5px;
+}

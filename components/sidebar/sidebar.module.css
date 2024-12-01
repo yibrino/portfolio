@@ -1,0 +1,64 @@
+/* Sidebar container */
+.sidebar {
+  flex: 0 0 250px; /* Fixed width of 250px */
+  width: 250px; /* Ensures the sidebar doesn't shrink or expand */
+  padding: 5px;
+  margin: 0px;
+  min-height: 100vh; /* Keeps the sidebar height equal to the viewport */
+  border-right: 2px solid #00060b;
+
+  position: sticky;
+  top: 50px; /* Keeps sidebar sticky with an offset from top */
+}
+
+/* Wrapper for the sidebar content */
+.sidebarWrapper {
+  padding: 20px;
+  height: 100%; /* Ensures the wrapper takes up full sidebar height */
+  color: #dddddd;
+}
+
+/* Menu container */
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+
+/* Sidebar title */
+.sidebarTitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: #f05454;
+}
+
+/* Sidebar list */
+.sidebarList {
+  list-style: none;
+  padding: 5px;
+}
+
+/* Sidebar icons */
+.sidebarIcon {
+  margin-right: 10px;
+  font-size: 20px !important;
+}
+
+/* Sidebar item style */
+.sidebarListItem {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for sidebar items */
+.sidebarListItem:hover {
+  background-color: #2d3748; /* Slight hover effect */
+}
+
+/* Active item style */
+.active {
+  background-color: #4a5568; /* Active background color */
+  color: white; /* Text color when active */
+}

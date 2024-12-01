@@ -1,0 +1,111 @@
+.slider {
+  border: 2px solid #00060b;
+  max-height: 500px;
+  min-width: 100vw;
+
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 2px;
+}
+
+.slider img {
+  width: calc(100vw - 28px); /* Reduces 10px from both left and right */
+  height: 500px; /* Keeps a fixed height */
+}
+
+.slider .loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.caption {
+  background-color: #01d293 !important;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  z-index: 1;
+}
+.caption h3 {
+  padding: 5px;
+}
+
+.slider .loadingSpinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+.fadeEnter {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fadeEnterActive {
+  opacity: 1;
+}
+
+.fadeExit {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fadeExitActive {
+  opacity: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #ffffff;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .caption {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    z-index: 1;
+  }
+  .caption h3 {
+    background-color: rgba(2, 2, 2, 0.5);
+  }
+}

@@ -1,0 +1,115 @@
+.commentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.commentItem {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px solid #171f38;
+  border-radius: 5px;
+}
+
+.commentContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editInput {
+  width: 100%;
+  color: #d1d5db;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.actionButtons button {
+  margin-left: 10px;
+}
+
+.editButton,
+.deleteButton,
+.saveButton,
+.cancelButton {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #171f38;
+  background-color: #01d293;
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+}
+
+.saveButton {
+  background-color: #28a745;
+}
+
+.cancelButton {
+  background-color: #6c757d;
+}
+
+.editButton:hover,
+.deleteButton:hover,
+.saveButton:hover,
+.cancelButton:hover {
+  opacity: 0.8;
+}
+.actionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.editIcon {
+  color: #4caf50; /* Green for edit */
+}
+
+.editIcon:hover {
+  color: #45a049;
+  transform: scale(1.1);
+}
+
+.deleteIcon {
+  color: #f44336; /* Red for delete */
+}
+.comment_content {
+  display: flex;
+  flex-direction: column; /* Ensures content stacks vertically */
+}
+
+.deleteIcon:hover {
+  color: #d32f2f;
+  transform: scale(1.1);
+}
+.comment {
+  font-size: 14px; /* Adjust size as needed */
+  color: #ffffff; /* General text color */
+  line-height: 1.5; /* Improves readability */
+}
+
+.authorName {
+  font-weight: bold; /* Highlights the author's name */
+  color: #01d293; /* Optional: Add color to make the author stand out */
+}

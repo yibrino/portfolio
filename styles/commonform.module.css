@@ -1,0 +1,128 @@
+.formContainer {
+  border: 2px solid #171f38;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.formContainer h1 {
+  font-size: 1.8rem;
+  color: #d1d5db;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup,
+.containerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label,
+.containerItem label {
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.formGroup input,
+.containerItem input,
+.containerItem select,
+.containerItem textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #d1d5db;
+  background-color: #2a3749;
+  border: 1px solid #404e76;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.containerItem input:focus,
+.containerItem select:focus,
+.containerItem textarea:focus {
+  border-color: #01d293;
+  outline: none;
+}
+
+.containerItem textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.Button {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #171f38;
+  background-color: #01d293;
+  padding: 12px 20px; /* Adjust padding for better alignment */
+  border: none;
+  transition: background 0.3s ease;
+  display: inline-block; /* Ensure the button retains its inline-block behavior */
+}
+
+.Button:hover {
+  background-color: #02b583;
+}
+
+.Button:disabled {
+  cursor: not-allowed;
+}
+
+.imagePreviewContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width of the parent container */
+  max-height: auto; /* Allow height to adjust based on the image aspect ratio */
+  margin-bottom: 10px;
+}
+
+.imagePreview {
+  width: 100%; /* Cover the entire width of the container */
+  height: auto; /* Maintain the aspect ratio of the image */
+  border-radius: 8px;
+  object-fit: contain; /* Ensure the entire image is visible */
+}
+
+.imagePlaceholder {
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+  width: 100%;
+  border: 2px dashed #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.fileUploadLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fileInput {
+  display: none; /* Hide the input */
+}
+
+.uploadIcon {
+  font-size: 24px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.uploadIcon:hover {
+  color: #0056b3;
+}
