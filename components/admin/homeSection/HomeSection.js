@@ -85,6 +85,7 @@ const HomeSection = () => {
   const columnNamesTeam = [
     "teamprofile_id",
     "teamprofile_fullname",
+    "teamprofile_title",
     "teamprofile_location",
     "teamprofile_phonenumber",
     "teamprofile_overview",

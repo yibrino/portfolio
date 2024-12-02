@@ -36,8 +36,11 @@ const Hero = () => {
             <SectionSubtitle subtitle={heroData.hero_title} />
             <SectionContent content={heroData.hero_about} />
             <div className={classes.services__container}>
-              <CustomizedButton title="Certifications" path="#contact" />
-              <CustomizedButton title="Consultancy services" path="#contact" />
+              <CustomizedButton title="Software" path="#contact" />
+              <CustomizedButton
+                title="Artificial Intelligence"
+                path="#contact"
+              />
             </div>
           </div>
         </Col>

@@ -17,6 +17,7 @@ export default function TeamForm() {
   const { id } = router.query;
   const { teams } = useSelector((state) => state.teams);
   const [teamFullname, setTeamFullname] = useState("");
+  const [teamTitle, setTeamTitle] = useState("");
   const [teamLocation, setTeamLocation] = useState("");
   const [teamEmail, setTeamEmail] = useState("");
   const [teamPhonenumber, setTeamPhoneNumber] = useState("");
@@ -38,6 +39,7 @@ export default function TeamForm() {
       const selectedTeam = teams.find((team) => team.teamprofile_id == id);
       if (selectedTeam) {
         setTeamFullname(selectedTeam.teamprofile_fullname);
+        setTeamTitle(selectedTeam.teamprofile_title);
         setTeamLocation(selectedTeam.teamprofile_location);
         setTeamEmail(selectedTeam.teamprofile_email);
         setTeamPhoneNumber(selectedTeam.teamprofile_phonenumber);
@@ -97,7 +99,8 @@ export default function TeamForm() {
       !teamPhonenumber ||
       !teamPhonenumber ||
       !teamOverView ||
-      !teamImgUrl
+      !teamImgUrl ||
+      !teamTitle
     ) {
       toast.error("All fields are required");
       return;
@@ -107,6 +110,8 @@ export default function TeamForm() {
         updateTeam({
           teamprofile_id: id,
           teamprofile_fullname: teamFullname,
+          teamprofile_title: teamTitle,
+
           teamprofile_email: teamEmail,
           teamprofile_location: teamLocation,
           teamprofile_phonenumber: teamPhonenumber,
@@ -131,6 +136,8 @@ export default function TeamForm() {
       dispatch(
         createTeam({
           teamprofile_fullname: teamFullname,
+          teamprofile_title: teamTitle,
+
           teamprofile_email: teamEmail,
           teamprofile_location: teamLocation,
           teamprofile_phonenumber: teamPhonenumber,
@@ -199,6 +206,17 @@ export default function TeamForm() {
             placeholder="Write your fullname"
             value={teamFullname}
             onChange={(e) => setTeamFullname(e.target.value)}
+          />
+        </div>
+        {/* Team Title */}
+        <div className={styles.newCarouselItem}>
+          <label>Team Title</label>
+          <input
+            className={styles.carouselInput}
+            type="text"
+            placeholder="Write your title"
+            value={teamTitle}
+            onChange={(e) => setTeamTitle(e.target.value)}
           />
         </div>
 

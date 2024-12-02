@@ -6,6 +6,7 @@ export const updateTeam = createAsyncThunk(
   async (
     {
       teamprofile_id,
+      teamprofile_title,
       teamprofile_fullname,
       teamprofile_location,
       teamprofile_email,
@@ -20,6 +21,7 @@ export const updateTeam = createAsyncThunk(
         `${baseUrl}/team/update/${teamprofile_id}/`,
         {
           teamprofile_fullname: teamprofile_fullname,
+          teamprofile_title: teamprofile_title,
           teamprofile_location: teamprofile_location,
           teamprofile_email: teamprofile_email,
           teamprofile_phonenumber: teamprofile_phonenumber,

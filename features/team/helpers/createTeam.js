@@ -6,6 +6,8 @@ export const createTeam = createAsyncThunk(
   async (
     {
       teamprofile_fullname,
+      teamprofile_title,
+
       teamprofile_email,
       teamprofile_location,
       teamprofile_phonenumber,
@@ -16,6 +18,7 @@ export const createTeam = createAsyncThunk(
   ) => {
     try {
       const response = await axios.post(`${baseUrl}/team/create/`, {
+        teamprofile_title: teamprofile_title,
         teamprofile_fullname: teamprofile_fullname,
         teamprofile_email: teamprofile_email,
         teamprofile_location: teamprofile_location,

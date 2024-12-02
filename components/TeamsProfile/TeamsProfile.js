@@ -68,7 +68,7 @@ const TeamsProfile = ({ id }) => {
     <div className={classes.profileCard}>
       <div>
         <Row className={`${classes.profileRow}`}>
-          <Subtitle subtitle="Full Stack Developer | Nextjs | React | Django | JavaScript | Angular" />
+          <Subtitle subtitle={selectedTeam.teamprofile_title} />
           <Col className="mt-4 mb-4" md="4">
             <img
               src={selectedTeam.teamprofile_img_url}

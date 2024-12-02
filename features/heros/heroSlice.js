@@ -25,13 +25,13 @@ const heroSlice = createSlice({
         state.isLoading = true;
         state.error = "";
       })
-      .addCase(getAllHeros.fulfilled, (state, action) => {
+      .addCase(getAllHeros.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.heros = action.payload; // Assuming action.payload is the fetched list of news
+        state.heros = payload; // Assuming action.payload is the fetched list of news
       })
       .addCase(getAllHeros.rejected, (state, { payload }) => {
         state.isLoading = false;
-        state.error = action.payload;
+        state.error = payload;
       })
 
       // Update Hero

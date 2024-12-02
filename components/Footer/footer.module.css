@@ -4,7 +4,6 @@
   overflow-x: hidden;
   padding: 5px;
   margin: 0px;
-  position: sticky; /* Fixes the footer to a specific position */
   bottom: 0; /* Positions the footer at the bottom of the viewport */
   left: 0;
   width: 100%; /* Ensures it spans the entire width of the screen */
