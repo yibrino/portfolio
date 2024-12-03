@@ -15,19 +15,18 @@ const YibrahProfile = () => {
   useEffect(() => {
     dispatch(getAllTeams());
     setTeam(teams[0]);
-  }, []);
+  }, [dispatch]);
+  if (!team) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <div className={styles.teamprofile}>
-      {team ? (
-        <TeamsProfile
-          id={team.teamprofile_id}
-          key={team.teamprofile_id}
-          {...team} // Spread team data as props to TeamsProfile
-        />
-      ) : (
-        <LoadingSpinner /> // Show a loading spinner while the data is being fetched
-      )}
+      <TeamsProfile
+        id={team.teamprofile_id}
+        key={team.teamprofile_id}
+        // Spread team data as props to TeamsProfile
+      />
     </div>
   );
 };
