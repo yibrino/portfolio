@@ -11,11 +11,13 @@ import SpecializationSection from "../Section/specialization";
 import EducationList from "../Section/education";
 import { useSelector } from "react-redux";
 import LoadingSpinner from "../../utlis/loadingSpinner";
+import { getAllTeams } from "../../features/team/helpers";
 const TeamsProfile = ({ id }) => {
   const { teams } = useSelector((state) => state.teams);
   const [selectedTeam, setSelectedTeam] = useState(null);
 
   useEffect(() => {
+    dispatch(getAllTeams());
     // Filter teams based on the given `id`
     const team = teams.find((team) => team.teamprofile_id === id);
     setSelectedTeam(team);
