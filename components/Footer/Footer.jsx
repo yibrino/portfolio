@@ -5,27 +5,19 @@ import { getAllPages } from "../../features/pages/helpers";
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedPage } from "../../features/pages/pageSlice";
 import { selectedPage } from "../../features/pages/pageSlice";
+import { pages } from "../../utlis/pages";
 import classes from "./footer.module.css";
 
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   const dispatch = useDispatch();
-  const activePage = useSelector(selectedPage);
-  const { pages } = useSelector((state) => state.pages);
-  useEffect(() => {
-    // Fetch pages
-    dispatch(getAllPages());
-  }, [dispatch]);
+
   console.log("Pages inside footer", pages);
   const handelActiveLink = (pageLabel) => {
     dispatch(setSelectedPage(pageLabel));
   };
-  useEffect(() => {
-    if (pages.length > 0) {
-      dispatch(setSelectedPage(pages[0]?.page_label));
-    }
-  }, [dispatch, pages]);
+
   return (
     <div className={classes.footer}>
       <Row className={classes.footerRow}>

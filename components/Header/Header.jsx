@@ -1,35 +1,29 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Container } from "reactstrap";
-import baseUrl from "../../utlis/config";
 import classes from "./header.module.css";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Import lucide-react icons
-import { getData } from "../../utlis/getData";
 import LoadingSpinner from "../../utlis/loadingSpinner";
-import { getAllPages } from "../../features/pages/helpers";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { pages } from "../../utlis/pages";
 import { setSelectedPage } from "../../features/pages/pageSlice";
-import { selectedPage } from "../../features/pages/pageSlice";
+import { useRouter } from "next/router";
 const Header = () => {
   const dispatch = useDispatch();
   const [menuOpen, setMenuOpen] = useState(false); // Manage menu open/close state
-  const activePage = useSelector(selectedPage);
-  const { pages } = useSelector((state) => state.pages);
+
+  const router = useRouter();
+  const currentPath = router.pathname;
   const headerRef = useRef(null);
   const menuRef = useRef(null);
 
   // UseEffect to call fetchPages when the component mounts
   useEffect(() => {
-    dispatch(getAllPages());
+    // dispatch(getAllPages());
     window.addEventListener("scroll", headerFunc);
 
     return () => window.removeEventListener("scroll", headerFunc);
   }, []); // Empty dependency array ensures this runs only once when the component mounts
-  useEffect(() => {
-    if (pages.length > 0) {
-      dispatch(setSelectedPage(pages[0]?.page_label));
-    }
-  }, [dispatch, pages]);
+
   const headerFunc = () => {
     if (
       document.body.scrollTop > 70 ||
@@ -41,6 +35,7 @@ const Header = () => {
     }
   };
   const handelActiveLink = (pageLabel) => {
+    console.log("A page clicked", pageLabel);
     dispatch(setSelectedPage(pageLabel));
   };
 
@@ -71,7 +66,7 @@ const Header = () => {
                   <a
                     onClick={() => handelActiveLink(page.page_label)}
                     className={
-                      activePage === page.page_label
+                      currentPath === page.page_link
                         ? classes.activeLink
                         : classes.not__visited
                     }
@@ -114,7 +109,7 @@ const Header = () => {
               <a
                 onClick={() => setActiveLink(page.page_label)}
                 className={
-                  activePage === page.page_label
+                  currentPath === page.page_link
                     ? classes.activeLink
                     : classes.not__visited
                 }

@@ -9,10 +9,11 @@ import DynamicTabs from "../UI/Dynamictabs";
 import OverView from "../Common/Button/Content/OverView";
 import SpecializationSection from "../Section/specialization";
 import EducationList from "../Section/education";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LoadingSpinner from "../../utlis/loadingSpinner";
 import { getAllTeams } from "../../features/team/helpers";
 const TeamsProfile = ({ id }) => {
+  const dispatch = useDispatch();
   const { teams } = useSelector((state) => state.teams);
   const [selectedTeam, setSelectedTeam] = useState(null);
 
