@@ -79,3 +79,13 @@
 .buttons .supervision {
 	background-color: #2ecc71;
 } */
+@media (max-width: 768px) {
+  .profileCard {
+    margin: 3px;
+    padding: 5px;
+  }
+  .profileRow {
+    padding: 0px;
+    margin: 0px;
+  }
+}

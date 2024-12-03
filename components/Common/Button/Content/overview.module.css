@@ -12,3 +12,9 @@
   line-height: 1.6;
   color: #d1d5db;
 }
+@media (max-width: 768px) {
+  .paragraph__content {
+    margin: 3px;
+    padding: 5px;
+  }
+}

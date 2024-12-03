@@ -50,13 +50,13 @@ const newsSlice = createSlice({
         state.isLoading = true;
         state.error = "";
       })
-      .addCase(getAllNews.fulfilled, (state, action) => {
+      .addCase(getAllNews.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.news = action.payload; // Assuming action.payload is the fetched list of news
+        state.news = payload; // Assuming action.payload is the fetched list of news
       })
       .addCase(getAllNews.rejected, (state, { payload }) => {
         state.isLoading = false;
-        state.error = action.payload;
+        state.error = payload;
       });
   },
 });

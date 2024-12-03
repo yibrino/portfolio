@@ -77,3 +77,9 @@
   line-height: 1.6;
   color: #d1d5db;
 }
+@media (max-width: 768px) {
+  .sectionList {
+    gap: 3px;
+    padding: 5px;
+  }
+}
