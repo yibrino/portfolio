@@ -8,20 +8,26 @@ import { getAllTeams } from "../../../features/team/helpers";
 
 const YibrahProfile = () => {
   const dispatch = useDispatch();
-  const [team, setTeam] = useState(null); // Initialize as null to handle loading state
+  const [selectedTeam, setSelectedTeam] = useState(null); // Initialize as null to handle loading state
   const { teams } = useSelector((state) => state.teams);
   console.log("teams", teams);
 
   useEffect(() => {
+    // Dispatch to get all teams
     dispatch(getAllTeams());
-    setTeam(teams[0]);
-  }, [dispatch]);
+
+    // Filter the first team where teamprofile_id equals 0
+    const first_team = teams.find((team) => team.teamprofile_id === 0);
+    setSelectedTeam(first_team);
+    // Optionally, you can do something with the selectedTeam here
+    console.log(selectedTeam);
+  }, [dispatch, teams]); // Ensure 'teams' is part of the dependency array
 
   return (
     <div className={styles.teamprofile}>
       <TeamsProfile
-        id={team.teamprofile_id}
-        key={team.teamprofile_id}
+        id={selectedTeam.teamprofile_id}
+        key={selectedTeam.teamprofile_id}
         // Spread team data as props to TeamsProfile
       />
     </div>
