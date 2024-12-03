@@ -16,7 +16,7 @@ const YibrahProfile = () => {
     dispatch(getAllTeams());
     setTeam(teams[0]);
   }, [dispatch]);
-  if (!team) {
+  if (!teams) {
     return <LoadingSpinner />;
   }
 
