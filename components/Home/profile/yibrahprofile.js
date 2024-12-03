@@ -26,7 +26,7 @@ const YibrahProfile = () => {
   return (
     <div className={styles.teamprofile}>
       <TeamsProfile
-        id={selectedTeam.teamprofile_id}
+        id={0}
         key={selectedTeam.teamprofile_id}
         // Spread team data as props to TeamsProfile
       />
