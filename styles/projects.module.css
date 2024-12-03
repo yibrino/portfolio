@@ -3,17 +3,30 @@
   justify-content: space-between;
   width: 100%;
 }
+.profileprofile {
+  padding: 10px;
+  margin: 2px;
+  border-bottom: 2px solid #00060b;
+  min-width: 100vw;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 2px;
+}
 .profileCard {
   border: 2px solid #171f38;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  border-bottom: 2px solid #00060b;
+
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .profileRow {
   padding: 5px;
   margin: 5px;

@@ -34,7 +34,7 @@ const Project = ({ id }) => {
             <Video youtube_url={selectedProject.project_youtube_url} />
           </Col>
 
-          <Col className={`${classes.dynamicTabs}`} md="6">
+          <Col md="6">
             <DynamicTabs
               tabs={[
                 {

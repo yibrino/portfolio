@@ -20,7 +20,7 @@ const Projects = () => {
   }
 
   return (
-    <div className={styles.projectprofile}>
+    <div className={styles.profileprofile}>
       <div>
         {projects.length > 0 ? (
           projects.map((project) => (
