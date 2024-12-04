@@ -21,6 +21,7 @@ const News = () => {
     "news_id",
     "category",
     "news_title",
+    "news_link_src",
     "news_content",
     "created_at",
     "updated_at",

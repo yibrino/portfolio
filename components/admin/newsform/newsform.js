@@ -25,6 +25,8 @@ export default function NewsForm() {
   const [newsTitle, setNewsTitle] = useState("");
   const [newsUrl, setNewsUrl] = useState("");
   const [newsContent, setNewsContent] = useState("");
+  const [newsLinkSrc, setNewsLinkSrc] = useState("");
+
   const [newsImage, setNewsImage] = useState("");
   const [newsCategory, setNewsCategory] = useState("");
 
@@ -105,6 +107,7 @@ export default function NewsForm() {
           news_id: id,
           news_title: newsTitle,
           news_img_url: newsUrl,
+          news_link_src: newsLinkSrc,
           news_content: newsContent,
           category: newsCategory,
         })
@@ -123,6 +126,7 @@ export default function NewsForm() {
         createNews({
           news_title: newsTitle,
           news_img_url: newsUrl,
+          news_link_src: newsLinkSrc,
           news_content: newsContent,
           category: newsCategory,
         })
@@ -184,6 +188,15 @@ export default function NewsForm() {
             onChange={(e) => setNewsContent(e.target.value)}
             placeholder="Enter the content here"
           ></textarea>
+        </div>
+        <div className={styles.containerItem}>
+          <label>News Link Source</label>
+          <input
+            type="text"
+            value={newsLinkSrc}
+            onChange={(e) => setNewsLinkSrc(e.target.value)}
+            placeholder="Enter the source link"
+          />
         </div>
         <div className={styles.containerItem}>
           <label>Category</label>

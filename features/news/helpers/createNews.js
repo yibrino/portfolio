@@ -4,13 +4,14 @@ import baseUrl from "../../../utlis/config";
 export const createNews = createAsyncThunk(
   "news/createNews",
   async (
-    { news_title, news_img_url, news_content, category },
+    { news_title, news_img_url, news_link_src, news_content, category },
     { rejectWithValue }
   ) => {
     try {
       const response = await axios.post(`${baseUrl}/news/create/`, {
         news_title: news_title,
         news_img_url: news_img_url,
+        news_link_src: news_link_src,
         news_content: news_content,
         category: category,
       });

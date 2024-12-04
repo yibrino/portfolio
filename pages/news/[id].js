@@ -220,6 +220,16 @@ const NewsDetail = () => {
       <Row className={classes.details}>
         <TitleSection title={newsItem.news_title} />
         <SectionContent content={newsItem.news_content} />
+        <p>
+          <a
+            href={newsItem.news_link_src}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.info__item}
+          >
+            {newsItem.news_title}
+          </a>
+        </p>
         {/* News Image */}
         {newsItem.news_img_url && (
           <div className={classes.imageContainer}>

@@ -88,7 +88,18 @@ const News = () => {
                 style={{ cursor: "pointer" }}
               >
                 <TitleSection title={item.news_title} />
+
                 <SectionContent content={item.news_content} />
+                <p>
+                  <a
+                    href={item.news_link_src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.info__item}
+                  >
+                    {item.news_title}
+                  </a>
+                </p>
                 {item.news_img_url && (
                   <div className={classes.cardImage}>
                     <img

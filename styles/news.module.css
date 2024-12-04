@@ -98,3 +98,31 @@
   padding: 20px;
   margin: 5px;
 }
+.info__item {
+  color: #01d293;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  column-gap: 1rem;
+}
+
+.info__item p {
+  color: #01d293;
+  margin: 5px;
+}
+
+.info__item span i {
+  color: #555;
+
+  padding: 5px;
+  border-radius: 5px;
+}
+.info__item a {
+  color: #01d293; /* Set the color of anchor tags */
+  text-decoration: none; /* Remove underline (optional) */
+}
+
+.info__item a:hover {
+  color: #019a74; /* Optional: Change color on hover for better UX */
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
