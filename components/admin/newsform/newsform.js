@@ -44,6 +44,7 @@ export default function NewsForm() {
       if (selectedNews) {
         setNewsTitle(selectedNews.news_title);
         setNewsUrl(selectedNews.news_img_url);
+        setNewsLinkSrc(selectedNews.news_link_src);
         setNewsContent(selectedNews.news_content);
         setNewsCategory(selectedNews.category);
       }
@@ -96,7 +97,13 @@ export default function NewsForm() {
     console.log("news content", newsContent);
     console.log("news category", newsCategory);
 
-    if (!newsTitle || !newsUrl || !newsContent || !newsCategory) {
+    if (
+      !newsTitle ||
+      newsLinkSrc ||
+      !newsUrl ||
+      !newsContent ||
+      !newsCategory
+    ) {
       toast.error("All required fields must be filled!");
       return;
     }
