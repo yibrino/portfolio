@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/skills.module.css";
 import { getData } from "../utlis/getData";
 import BasicCertificates from "../components/Certificates/BasicCertificates/BasicCertificates";
+import LoadingSpinner from "../utlis/loadingSpinner";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
@@ -22,6 +23,7 @@ const Skills = () => {
         console.error("Error fetching skills data:", error);
       });
   }, []);
+  if (!skills) return <LoadingSpinner />;
   return (
     <div className={styles.skills}>
       <div className={styles.skillrow}>
