@@ -5,24 +5,11 @@ import styles from "../styles/skills.module.css";
 import { getData } from "../utlis/getData";
 import BasicCertificates from "../components/Certificates/BasicCertificates/BasicCertificates";
 import LoadingSpinner from "../utlis/loadingSpinner";
+import { useSelector } from "react-redux";
 
 const Skills = () => {
-  const [skills, setSkills] = useState([]);
+  const { skills } = useSelector((state) => state.skills);
 
-  useEffect(() => {
-    getData("skills")
-      .then((data) => {
-        if (data) {
-          console.log("skills data", data);
-          setSkills(data);
-        } else {
-          console.error("No data returned for skills");
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching skills data:", error);
-      });
-  }, []);
   if (!skills) return <LoadingSpinner />;
   return (
     <div className={styles.skills}>
