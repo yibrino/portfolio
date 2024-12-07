@@ -99,7 +99,7 @@ export default function NewsForm() {
 
     if (
       !newsTitle ||
-      newsLinkSrc ||
+      !newsLinkSrc ||
       !newsUrl ||
       !newsContent ||
       !newsCategory

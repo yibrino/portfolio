@@ -41,20 +41,6 @@ const HomeSection = () => {
   ];
   const [selectedTab, setSelectedTab] = useState(tabs[0]?.label);
 
-  const handleEmailSubmit = () => {
-    // Show success toast
-    toast.success("Comment Added Successfully!", {
-      position: "top-center",
-      autoClose: 10000, // Toast stays for 10 seconds
-      className: classes.customSuccessToast, // Custom class for toast container
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progressClassName: classes.customProgressBar, // Custom progress bar
-    });
-  };
-
   useEffect(() => {
     if (!selectedTab) return;
 
