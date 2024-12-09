@@ -31,6 +31,12 @@ const Contact = () => {
               </span>
               <p>+393278020805</p>
             </li>
+            <li className={`${classes.info__item}`}>
+              <span>
+                <i className="ri-skype-line"></i>
+              </span>
+              <p>https://join.skype.com/invite/ET3eSwXeLnCt</p>
+            </li>
           </ul>
           <div className={`${classes.social__links}`}>
             {socialLinks.map((link, index) => (
